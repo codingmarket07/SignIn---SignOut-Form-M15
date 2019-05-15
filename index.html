@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SignIn - SignUp Form</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+	$(document).ready(function(){
+  		$(".sign_up").hide();
+		$(".sign_in_li").addClass("active");
+
+		$(".sign_up_li").click(function(){
+		  $(this).addClass("active");
+		  $(".sign_in_li").removeClass("active");
+		  $(".sign_up").show();
+		   $(".sign_in").hide();
+		})
+
+		$(".sign_in_li").click(function(){
+		  $(this).addClass("active");
+		  $(".sign_up_li").removeClass("active");
+		  $(".sign_in").show();
+		   $(".sign_up").hide();
+		})
+  	});	
+	</script>
+</head>
+<body>
+
+<div class="wrapper">
+<div class="container">
+    <div class="tabs">
+      <ul>
+        <li class="sign_in_li">Sign in</li>
+        <li class="sign_up_li">Sign up</li>
+      </ul>
+    </div>
+  
+    <div class="sign_in">
+      <div class="input_field">
+        <input type="text" placeholder="E-mail" class="input">
+      </div>
+      <div class="input_field">
+        <input type="password" placeholder="Password" class="input">
+      </div>
+      <div class="btn"><a href="#">Sign in</a></div>
+    </div>
+    
+    
+    <div class="sign_up">
+      <div class="input_field">
+        <input type="text" placeholder="Username" class="input">
+      </div>
+      <div class="input_field">
+        <input type="text" placeholder="E-mail" class="input">
+      </div>
+      <div class="input_field">
+        <input type="password" placeholder="Password" class="input">
+      </div>
+      <div class="btn"><a href="#">Sign up</a></div>
+    </div>
+   
+</div>
+</div>	
+
+</body>
+</html>
